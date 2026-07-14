@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" font-family="Menlo, Consolas, monospace" font-size="13.5">
+  <rect width="760" height="420" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="27" fill="#8b949e" text-anchor="middle" font-size="12">coalmine — did the model leak its system prompt?</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="60"><tspan fill="#7ee787">$</tspan> coalmine plant --label prod-bot prompt.txt -o system.txt</text>
+    <text x="24" y="80" fill="#8b949e">coalmine: planted canary 8baf53a9 (label "prod-bot") — registry coalmine.json</text>
+    <text x="24" y="108"><tspan fill="#7ee787">$</tspan> coalmine scan chat.log</text>
+    <text x="24" y="132" fill="#d2a8ff">coalmine scan — 3 leaks in 1 file</text>
+    <text x="24" y="162"><tspan fill="#f778ba">LEAK</tspan>  chat.log:2:41</text>
+    <text x="24" y="182">      canary <tspan fill="#79c0ff">8baf53a9</tspan> (prod-bot)  ·  exact  ·  <tspan fill="#ff7b72">high</tspan></text>
+    <text x="24" y="200" fill="#8b949e">      └─ …my integrity marker is CM7Q3KXN4TP2A9ZR6WB0.</text>
+    <text x="24" y="226"><tspan fill="#f778ba">LEAK</tspan>  chat.log:3:33</text>
+    <text x="24" y="246">      canary <tspan fill="#79c0ff">8baf53a9</tspan> (prod-bot)  ·  base64  ·  <tspan fill="#ff7b72">high</tspan></text>
+    <text x="24" y="264" fill="#8b949e">      └─ …encoded: SW50ZWdyaXR5IG1hcmtlcjogQ003UTNLWE40…</text>
+    <text x="24" y="290"><tspan fill="#f778ba">LEAK</tspan>  chat.log:4:37</text>
+    <text x="24" y="310">      canary <tspan fill="#79c0ff">8baf53a9</tspan> (prod-bot)  ·  reversed  ·  <tspan fill="#ff7b72">high</tspan></text>
+    <text x="24" y="328" fill="#8b949e">      └─ …spelled backwards that's 0BW6RZ9A2PT4NXK3Q7MC</text>
+    <text x="24" y="358" fill="#8b949e">3 leaks · 1 file affected · 1 file scanned · 0 skipped</text>
+    <text x="24" y="378"><tspan fill="#8b949e">scan: </tspan><tspan fill="#ff7b72">LEAK</tspan>  <tspan fill="#8b949e">(exit 1)</tspan></text>
+  </g>
+</svg>

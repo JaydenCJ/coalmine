@@ -1,0 +1,17 @@
+# build artifacts
+/coalmine
+/dist/
+
+# test and coverage output
+*.test
+*.out
+coverage.*
+
+# a real canary registry must never be committed — it holds live tokens
+/coalmine.json
+
+# editor noise
+.idea/
+.vscode/
+*.swp
+.DS_Store
